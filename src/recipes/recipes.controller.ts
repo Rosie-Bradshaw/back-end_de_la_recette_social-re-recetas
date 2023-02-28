@@ -21,7 +21,7 @@ import { CreateCommentDto } from './dto/create-comment.dto';
 export class RecipesController {
   constructor(private readonly recipesService: RecipesService) {}
 
-  @UseGuards(JwtAuthGuard)
+  // @UseGuards(JwtAuthGuard)
   @Post()
   async create(@Body() createRecipeDto: CreateRecipeDto) {
     return this.recipesService.create(createRecipeDto);
